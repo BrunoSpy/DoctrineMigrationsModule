@@ -1,7 +1,7 @@
 {
-    "name": "DietLabs/doctrine-migrations-module",
+    "name": "murganikolay/doctrine-migrations-module",
     "description": "Doctrine migrations module for Zend Framework 2",
-    "homepage": "https://github.com/DietLabs/DoctrineMigrationsModule",
+    "homepage": "https://github.com/murganikolay/DoctrineMigrationsModule",
     "type": "library",
     "license": "MIT",
     "keywords": [
