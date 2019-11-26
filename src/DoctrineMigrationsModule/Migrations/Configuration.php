@@ -8,13 +8,13 @@
  */
 namespace DoctrineMigrationsModule\Migrations;
 
-use Doctrine\DBAL\Migrations\Configuration\Configuration AS Migrations_Configuration;
+use Doctrine\Migrations\Configuration\Configuration AS Migrations_Configuration;
 
 class Configuration extends Migrations_Configuration
 {
     private $_isRegistered = false;
 
-    public function setMigrationsDirectory($migrationsDirectory)
+    public function setMigrationsDirectory(string $migrationsDirectory) : void
     {
         if (!file_exists($migrationsDirectory)) {
             mkdir($migrationsDirectory, 0777, true);
@@ -25,7 +25,7 @@ class Configuration extends Migrations_Configuration
         $this->_registerMigrations();
     }
 
-    public function setMigrationsNamespace($migrationsNamespace)
+    public function setMigrationsNamespace(string $migrationsNamespace) : void
     {
         parent::setMigrationsNamespace($migrationsNamespace);
         $this->_registerMigrations();
