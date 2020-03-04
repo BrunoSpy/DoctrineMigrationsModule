@@ -3,7 +3,7 @@ ini_set('display_errors', true);
 
 chdir(dirname(__DIR__ . '/../../../...'));
 require_once 'vendor/ZendFramework/library/Zend/Loader/AutoloaderFactory.php';
-Zend\Loader\AutoloaderFactory::factory(array('Zend\Loader\StandardAutoloader' => array()));
+Laminas\Loader\AutoloaderFactory::factory(array('Laminas\Loader\StandardAutoloader' => array()));
 
 $appConfig = include 'config/application.config.php';
 
@@ -16,8 +16,8 @@ $moduleManager->events()->attachAggregate($defaultListeners);
 $moduleManager->loadModules();
 
 // Create application, bootstrap, and run
-$bootstrap   = new Zend\Mvc\Bootstrap($defaultListeners->getConfigListener()->getMergedConfig());
-$application = new Zend\Mvc\Application;
+$bootstrap   = new Laminas\Mvc\Bootstrap($defaultListeners->getConfigListener()->getMergedConfig());
+$application = new Laminas\Mvc\Application;
 $bootstrap->bootstrap($application);
 $locator = $application->getLocator();
 

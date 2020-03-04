@@ -9,7 +9,7 @@ use
     \Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand,
     \Doctrine\DBAL\Migrations\Tools\Console\Command\StatusCommand,
     \Doctrine\DBAL\Migrations\Tools\Console\Command\VersionCommand,
-    \Zend\EventManager\EventInterface;
+    \Laminas\EventManager\EventInterface;
 use Doctrine\ORM\EntityManager;
 
 
