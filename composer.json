@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "doctrine/doctrine-orm-module": "^3.0",
+        "doctrine/doctrine-orm-module": "^2.0",
         "doctrine/migrations": "^2.0",
         "laminas/laminas-dependency-plugin": "^1.0"
     },
